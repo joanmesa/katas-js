@@ -34,4 +34,4 @@ let checkPrimeFactor = (i, num) => {
         return checkPrimeFactor((i + 1), num);
 }
 
-console.log(primeFactors(666));
+console.log(primeFactors(66));
