@@ -12,10 +12,9 @@ let isPrime = num =>
 let checkPrime = (i, num) => {
 
     if (i > num) return 0;
-    else if (num % i == 0)
+    if (num % i == 0)
         return 1 + checkPrime((i + 1), num);
-    else
-        return checkPrime((i + 1), num);
+    return checkPrime((i + 1), num);
 }
 
 let primeFactors = num =>
@@ -26,12 +25,11 @@ let factorNumbers = [];
 let checkPrimeFactor = (i, num) => {
 
     if (i > num) return factorNumbers;
-    else if (isPrime(i) && (num % i == 0)) {
+    if (isPrime(i) && (num % i == 0)) {
         factorNumbers.push(i);
         return checkPrimeFactor((i + 1), num);
     }
-    else
-        return checkPrimeFactor((i + 1), num);
+    return checkPrimeFactor((i + 1), num);
 }
 
-console.log(primeFactors(66));
+console.log(primeFactors(666));

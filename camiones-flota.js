@@ -24,3 +24,7 @@ const checkTrucks = (i, number1, number2) => {
 
 const trucks = theTruks(1, 500, 0)
 console.log(trucks);
+
+console.log(25 % 10);
+console.log((10 ** 0));
+console.log(Math.trunc(1 / 10));
